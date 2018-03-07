@@ -1,0 +1,22 @@
+EMPLOYEES
+	Name, birthdate, SIN, address, phone#, salary, gender, department
+DEPARTMENTS
+	Name unique, ID unique, manager, manager start-date, //location(s)
+PROJECTS
+	Name unique, ID unique, location//department in charge, 
+	
+Relations:
+	- SupervisorOf: EMPLOYEES and its supervisor
+	- ProjectUnder: M to M relation between PROJECTS and DEPARTMENTS
+	- employee M to M projects
+
+Weak entity
+	- LOCATIONS using department ID (department ID, )
+	- DEPENDENTS using employee ID (Name, gender, birthdate, SIN, employee ID)
+
+
+unsure:
+	- Another entity DEPENDENTS that stores the dependent information of each employee, with attributes of (Name, gender, birthdate, SIN, employee ID)
+
+
+ASSUMPTIONS
